@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HackerNews</string>
+    <string name="string_middle_dash"> - </string>
 </resources>
