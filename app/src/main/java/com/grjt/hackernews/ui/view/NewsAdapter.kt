@@ -8,9 +8,19 @@ import com.grjt.hackernews.data.model.NewsModel
 import com.grjt.hackernews.databinding.CardItemNewsBinding
 
 class NewsAdapter(
-    private var nList: List<NewsModel>,
+    private var nList: ArrayList<NewsModel>,
     private val context: Context
 ) : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
+
+    private lateinit var mListener : onItemClickListener
+
+    interface onItemClickListener {
+        fun onItemClick(position: Int)
+    }
+
+    fun deleteItem(i : Int) {
+        nList.removeAt(i)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         ViewHolder(CardItemNewsBinding.inflate(

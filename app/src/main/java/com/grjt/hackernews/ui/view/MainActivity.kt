@@ -8,7 +8,9 @@ import androidx.activity.viewModels
 import com.grjt.hackernews.core.Resource
 import com.grjt.hackernews.databinding.ActivityMainBinding
 import com.grjt.hackernews.ui.viewmodel.NewsViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
