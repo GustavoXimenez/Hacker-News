@@ -11,5 +11,5 @@ donde se ha añadido peticiones en red consumiendo un API con Retrofit 3 y corru
 
 - [Persistencia de datos con ROOM] - En esta cuarta parte vamos a implementar persistencia de datos con el OMR de Google Room [**Room**](https://github.com/GustavoXimenez/Hacker-News/tree/feature/implementRoom)
 
-- [Testing en Android con MVVM (Unit test)] - Quinta entrega dónde se implemento testing unitario. [**UnitTesting**](https://github.com/ArisGuimera/SimpleAndroidMVVM/tree/UnitTests)
+- [Testing en Android con MVVM (Unit test)] - Quinta entrega dónde se implemento testing unitario. [**UnitTesting**](https://github.com/GustavoXimenez/Hacker-News/tree/feature/unitTests)
 
