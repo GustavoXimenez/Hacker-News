@@ -3,24 +3,16 @@ package com.grjt.hackernews.ui.view
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.grjt.hackernews.data.model.NewsModel
 import com.grjt.hackernews.databinding.CardItemNewsBinding
+import com.grjt.hackernews.domain.model.News
 
 class NewsAdapter(
-    private var nList: ArrayList<NewsModel>,
-    private val context: Context
+    private var nList: ArrayList<News>,
+    private val context: Context,
+    private var onClickNews: ((News) -> Unit)? = null
 ) : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
-
-    private lateinit var mListener : onItemClickListener
-
-    interface onItemClickListener {
-        fun onItemClick(position: Int)
-    }
-
-    fun deleteItem(i : Int) {
-        nList.removeAt(i)
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         ViewHolder(CardItemNewsBinding.inflate(
@@ -34,12 +26,21 @@ class NewsAdapter(
 
     private fun configInitialNews(
         holder: ViewHolder,
-        data: NewsModel
+        data: News
     ) {
         holder.view.apply {
-            tvTitle.text = data.storyTitle
-            tvAuthor.text = data.author
-            tvTime.text = data.createAt
+            tvTitle.text = if(data.storyTitle.isNullOrEmpty()) "No title" else data.storyTitle
+            tvAuthor.text = if(data.author.isNullOrEmpty()) "No author" else data.author
+            tvTime.text = if(data.createAt.isNullOrEmpty()) "No datetime" else data.createAt
+            setOnClickListenerNews(data, cardNews)
+        }
+    }
+
+    private fun setOnClickListenerNews(news: News, cardNews: CardView) {
+        if(onClickNews != null) {
+            cardNews.setOnClickListener {
+                onClickNews?.invoke(news)
+            }
         }
     }
 
