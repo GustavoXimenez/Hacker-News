@@ -1,5 +1,6 @@
 package com.grjt.hackernews.ui.view
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -42,6 +43,12 @@ class NewsAdapter(
                 onClickNews?.invoke(news)
             }
         }
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun deleteItem(i: Int) {
+        nList.removeAt(i)
+        notifyDataSetChanged()
     }
 
     inner class ViewHolder(val view: CardItemNewsBinding) : RecyclerView.ViewHolder(view.root)

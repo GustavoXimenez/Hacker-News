@@ -5,7 +5,7 @@ de cada noticias. En **Master** tendrás la última versión.
 - [Clean Architecture + Retrofit y corrutinas] - El proyecto esta creado con clean architecture, una de las mejores opciones para ordenar nuestro proyecto en capas, 
 donde se ha añadido peticiones en red consumiendo un API con Retrofit 3 y corrutinas. [**CleanRetrofit**](https://github.com/GustavoXimenez/Hacker-News/tree/feature-cleanArchitecture) 
 
-- [MVVM] - Se implementa el patrón de presentación MVVM, el patrón sugerido por los desarrolladores de google [**MVVM**](hhttps://github.com/GustavoXimenez/Hacker-News/tree/feature-mvvm)
+- [MVVM] - Se implementa el patrón de presentación MVVM, el patrón sugerido por los desarrolladores de google [**MVVM**](https://github.com/GustavoXimenez/Hacker-News/tree/feature-mvvm)
 
 - [Dagger Hilt - Inyección de dependencias] - En esta tercera iteración se ha añadido inyección de dependencias en todo el proyecto con Dagger Hilt [**DaggerHilt**](https://github.com/GustavoXimenez/Hacker-News/tree/feature/dependencyInjection)
 
@@ -13,3 +13,4 @@ donde se ha añadido peticiones en red consumiendo un API con Retrofit 3 y corru
 
 - [Testing en Android con MVVM (Unit test)] - Quinta entrega dónde se implemento testing unitario. [**UnitTesting**](https://github.com/GustavoXimenez/Hacker-News/tree/feature/unitTests)
 
+- [Revisión SonarLint] - En la sexta entrega se realiza una revisión con sonarLint para validar que se hayan aplicado las mejores practicas de código y clean code. [**SonarLint**](https://github.com/GustavoXimenez/Hacker-News/tree/feature/sonarLint)
