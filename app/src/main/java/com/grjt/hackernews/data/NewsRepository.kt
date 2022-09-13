@@ -2,6 +2,7 @@ package com.grjt.hackernews.data
 
 import com.grjt.hackernews.data.database.dao.NewsDao
 import com.grjt.hackernews.data.database.entities.NewsEntity
+import com.grjt.hackernews.data.database.entities.toDatabase
 import com.grjt.hackernews.data.network.NewsService
 import com.grjt.hackernews.domain.model.News
 import com.grjt.hackernews.domain.model.toDomain
@@ -21,11 +22,12 @@ class NewsRepository @Inject constructor(
         return ArrayList(response.map { it.toDomain() })
     }
 
-    suspend fun insertNews(news: ArrayList<NewsEntity>){
-        newsDao.insertAll(news)
-    }
+    suspend fun insertNews(news: ArrayList<NewsEntity>) = newsDao.insertAll(news)
 
-    suspend fun clearNews() {
-        newsDao.deleteAllNews()
-    }
+
+    suspend fun clearNews() = newsDao.deleteAllNews()
+
+
+    suspend fun updateNews(news: News) = newsDao.updateNew(news.toDatabase())
+
 }

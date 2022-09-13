@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">HackerNews</string>
     <string name="string_middle_dash">\u0020 - \u0020</string>
+    <string name="error_delete_news">No se pudo eliminar la noticias</string>
 </resources>
