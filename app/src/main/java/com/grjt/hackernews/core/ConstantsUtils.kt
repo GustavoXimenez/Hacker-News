@@ -2,7 +2,7 @@ package com.grjt.hackernews.core
 
 object ConstantsUtils {
 
-    const val QUERY_SEARCH = "android"
     const val CONST_URL_NEW = "urlNews"
+    const val CONST_LOG_APP = "logNews"
 
 }

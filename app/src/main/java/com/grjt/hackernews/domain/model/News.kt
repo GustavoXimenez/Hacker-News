@@ -9,7 +9,7 @@ data class News(
     val storyId: Int? = 0,
     val storyTitle: String? = "",
     val storyUrl: String? = "",
-    val deleted: Boolean = false
+    var deleted: Boolean = false
 )
 
 fun NewsModel.toDomain() = News(

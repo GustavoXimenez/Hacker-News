@@ -5,7 +5,7 @@ import com.grjt.hackernews.data.database.entities.NewsEntity
 
 @Dao
 interface NewsDao {
-    @Query("SELECT * FROM news_table")
+    @Query("SELECT * FROM news_table WHERE deleted = 0")
     suspend fun getAllNews(): List<NewsEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
